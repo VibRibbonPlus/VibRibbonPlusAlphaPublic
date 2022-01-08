@@ -1,0 +1,11 @@
+We are in the Alpha stages
+
+Status:
+
+Prototype (Complete)
+
+Alpha (Incomplete, we are in Alpha stages)
+
+Beta (Not in this stage yet)
+
+Release (Not in this stage yet)

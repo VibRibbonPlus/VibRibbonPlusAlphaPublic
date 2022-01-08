@@ -1,0 +1,7 @@
+Animations folder - All the animations made by chris, these are the models used in game except for normal vibri
+
+VibRibbonPluss folder - The game's source code and files
+
+Soundtrack folder - Remastered songs created by Drew (Former team member)
+
+Vib-Ribbon+ Audio Files - Dialogue and other stuff that are to be used or not used in the game

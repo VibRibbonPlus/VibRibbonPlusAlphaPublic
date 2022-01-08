@@ -1,0 +1,24 @@
+Hello, you have found this txt in the animations folder of the vib-ribbon+ source files
+The .blend file contains the vibri, model, rig, and animations that I, aka Chris made
+Thanks!
+-Chris, 8/6/2021
+
+--UPDATE 8/18/2021
+Hello! This is a new update to the vibriwithanimations.blend file
+Changes:
+Entirely remade loop animation to align with loops
+Jumping over block animation made slightly higher
+
+--UPDATE 8/19/2021
+Hello! Another new update!
+Changes:
+Made loop and over block and walk animation's longer in order to make Vibri align with the ribbon
+
+--UPDATE 8/29/2021
+Hello! We have a new update, hope your excites!
+New worm, frog and queen vibri models. Each having different animations.
+
+--UPDATE 10/10/2021
+Hello again! It's been 2 months since the last update.
+Changes:
+Made the queen vibri's animation not look rough, and very bad. They actually look good!
