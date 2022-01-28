@@ -13,3 +13,7 @@ Because I can't upload the source code to GitHub, here it is on Mediafire.
 New/Latest Source Code: https://www.mediafire.com/file/lx9whso1onzdhfl/VibRibbonReplayLatest.zip/file
 
 Old Source Code: https://www.mediafire.com/file/9xzrcxk2k1stly1/Vib-Ribbon_Replay_Files.rar/file
+
+(UPDATE FROM MIKE77GH)
+these links are no longer needed to get the source code, as I managed to get the source code
+uploaded successfully via GITHub desktop. Still, if you want to, you can download them.
