@@ -1,0 +1,5 @@
+# Library
+*.pfx
+.vs/
+bin/
+obj/
