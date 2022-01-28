@@ -1,0 +1,224 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Emik.Microtypes.Unity.CacheableBehaviour</name>
+    </assembly>
+    <members>
+        <member name="T:Emik.Microtypes.Unity.CacheableBehaviour">
+            <summary>
+            A <see cref="T:UnityEngine.MonoBehaviour"/> with additional caching capabilities.
+            </summary>
+        </member>
+        <member name="M:Emik.Microtypes.Unity.CacheableBehaviour.Clear">
+            <summary>
+            Clears the <see cref="T:UnityEngine.Component"/> and <see cref="T:UnityEngine.Object"/> caches.
+            </summary>
+        </member>
+        <member name="M:Emik.Microtypes.Unity.CacheableBehaviour.Cache(Emik.Microtypes.Definite{System.Type},System.Func{System.Type,UnityEngine.Component},System.Boolean)">
+            <summary>
+            Caches the result of a function call that returns a component array in a dictionary, and will return the cached result if called again. Use this to alleviate expensive function calls.
+            </summary>
+            <exception cref="T:System.ArgumentException"></exception>
+            <exception cref="T:UnityEngine.MissingComponentException"></exception>
+            <param name="type">The type of component to search for.</param>
+            <param name="func">The expensive function to call, only if it hasn't ever been called by this method on the current instance before.</param>
+            <param name="allowNull">Whether it should throw an exception if it sees <see langword="null"/>, if not it will return the default value.</param>
+            <returns>The components specified by <paramref name="type"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Unity.CacheableBehaviour.Cache(Emik.Microtypes.Definite{System.Type},System.Func{System.Type,UnityEngine.Component[]},System.Boolean)">
+            <summary>
+            Caches the result of a function call that returns a component array in a dictionary, and will return the cached result if called again. Use this to alleviate expensive function calls.
+            </summary>
+            <exception cref="T:System.ArgumentException"></exception>
+            <exception cref="T:UnityEngine.MissingComponentException"></exception>
+            <param name="type">The type of component to search for.</param>
+            <param name="func">The expensive function to call, only if it hasn't ever been called by this method on the current instance before.</param>
+            <param name="allowNull">Whether it should throw an exception if it sees <see langword="null"/>, if not it will return the default value.</param>
+            <returns>The components specified by <paramref name="type"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Unity.CacheableBehaviour.Find(Emik.Microtypes.Definite{System.Type},System.Boolean)">
+            <summary>
+            Similar to <see cref="M:UnityEngine.Object.FindObjectsOfType(System.Type)"/>, however it caches the result in a dictionary, and will return the cached result if called again.
+            </summary>
+            <exception cref="T:System.ArgumentException"></exception>
+            <exception cref="T:UnityEngine.MissingComponentException"></exception>
+            <param name="type">The type of component to search for.</param>
+            <param name="allowNull">Whether it should throw an exception if it sees <see langword="null"/>, if not it will return the default value.</param>
+            <returns>The component specified by <paramref name="type"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Unity.CacheableBehaviour.Get(Emik.Microtypes.Definite{System.Type},System.Boolean)">
+            <summary>
+            Similar to <see cref="M:UnityEngine.Component.GetComponent(System.Type)"/>, however it caches the result in a dictionary, and will return the cached result if called again.
+            </summary>
+            <exception cref="T:UnityEngine.MissingComponentException"></exception>
+            <param name="type">The type of component to search for.</param>
+            <param name="allowNull">Whether it should throw an exception if it sees <see langword="null"/>, if not it will return the default value.</param>
+            <returns>The component specified by <paramref name="type"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Unity.CacheableBehaviour.GetChild(Emik.Microtypes.Definite{System.Type},System.Boolean)">
+            <summary>
+            Similar to <see cref="M:UnityEngine.Component.GetComponentInChildren(System.Type)"/>, however it caches the result in a dictionary, and will return the cached result if called again.
+            </summary>
+            <exception cref="T:System.ArgumentException"></exception>
+            <exception cref="T:UnityEngine.MissingComponentException"></exception>
+            <param name="type">The type of component to search for.</param>
+            <param name="allowNull">Whether it should throw an exception if it sees <see langword="null"/>, if not it will return the default value.</param>
+            <returns>The component specified by <paramref name="type"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Unity.CacheableBehaviour.GetParent(Emik.Microtypes.Definite{System.Type},System.Boolean)">
+            <summary>
+            Similar to <see cref="M:UnityEngine.Component.GetComponentInParent(System.Type)"/>, however it caches the result in a dictionary, and will return the cached result if called again.
+            </summary>
+            <exception cref="T:System.ArgumentException"></exception>
+            <exception cref="T:UnityEngine.MissingComponentException"></exception>
+            <param name="type">The type of component to search for.</param>
+            <param name="allowNull">Whether it should throw an exception if it sees <see langword="null"/>, if not it will return the default value.</param>
+            <returns>The component specified by <paramref name="type"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Unity.CacheableBehaviour.Finds(Emik.Microtypes.Definite{System.Type},System.Boolean)">
+            <summary>
+            Similar to <see cref="M:UnityEngine.Object.FindObjectsOfType(System.Type)"/>, however it caches the result in a dictionary, and will return the cached result if called again.
+            </summary>
+            <exception cref="T:System.ArgumentException"></exception>
+            <exception cref="T:UnityEngine.MissingComponentException"></exception>
+            <param name="type">The type of component to search for.</param>
+            <param name="allowNull">Whether it should throw an exception if it sees <see langword="null"/>, if not it will return the default value.</param>
+            <returns>The component specified by <paramref name="type"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Unity.CacheableBehaviour.Gets(Emik.Microtypes.Definite{System.Type},System.Boolean)">
+            <summary>
+            Similar to <see cref="M:UnityEngine.GameObject.GetComponents(System.Type)"/>, however it caches the result in a dictionary, and will return the cached result if called again.
+            </summary>
+            <exception cref="T:System.ArgumentException"></exception>
+            <exception cref="T:UnityEngine.MissingComponentException"></exception>
+            <param name="type">The type of component to search for.</param>
+            <param name="allowNull">Whether it should throw an exception if it sees <see langword="null"/>, if not it will return the default value.</param>
+            <returns>The component specified by <paramref name="type"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Unity.CacheableBehaviour.GetChildren(Emik.Microtypes.Definite{System.Type},System.Boolean)">
+            <summary>
+            Similar to <see cref="M:UnityEngine.GameObject.GetComponentsInChildren(System.Type)"/>, however it caches the result in a dictionary, and will return the cached result if called again.
+            </summary>
+            <exception cref="T:System.ArgumentException"></exception>
+            <exception cref="T:UnityEngine.MissingComponentException"></exception>
+            <param name="type">The type of component to search for.</param>
+            <param name="allowNull">Whether it should throw an exception if it sees <see langword="null"/>, if not it will return the default value.</param>
+            <returns>The component specified by <paramref name="type"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Unity.CacheableBehaviour.GetParents(Emik.Microtypes.Definite{System.Type},System.Boolean)">
+            <summary>
+            Similar to <see cref="M:UnityEngine.GameObject.GetComponentsInParent(System.Type)"/>, however it caches the result in a dictionary, and will return the cached result if called again.
+            </summary>
+            <exception cref="T:System.ArgumentException"></exception>
+            <exception cref="T:UnityEngine.MissingComponentException"></exception>
+            <param name="type">The type of component to search for.</param>
+            <param name="allowNull">Whether it should throw an exception if it sees <see langword="null"/>, if not it will return the default value.</param>
+            <returns>The component specified by <paramref name="type"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Unity.CacheableBehaviour.Cache``1(System.Func{``0},System.Boolean)">
+            <summary>
+            Caches the result of a function call that returns a component array in a dictionary, and will return the cached result if called again. Use this to alleviate expensive function calls.
+            </summary>
+            <exception cref="T:UnityEngine.MissingComponentException"></exception>
+            <typeparam name="T">The type of component to search for.</typeparam>
+            <param name="func">The expensive function to call, only if it hasn't ever been called by this method on the current instance before.</param>
+            <param name="allowNull">Whether it should throw an exception if it sees <see langword="null"/>, if not it will return the default value.</param>
+            <returns>The components specified by <typeparamref name="T"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Unity.CacheableBehaviour.Find``1(System.Boolean)">
+            <summary>
+            Similar to <see cref="M:UnityEngine.Object.FindObjectsOfType``1"/>, however it caches the result in a dictionary, and will return the cached result if called again.
+            </summary>
+            <exception cref="T:UnityEngine.MissingComponentException"></exception>
+            <typeparam name="T">The type of component to search for.</typeparam>
+            <param name="allowNull">Whether it should throw an exception if it sees <see langword="null"/>, if not it will return the default value.</param>
+            <returns>The component specified by <typeparamref name="T"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Unity.CacheableBehaviour.Get``1(System.Boolean)">
+            <summary>
+            Similar to <see cref="M:UnityEngine.Component.GetComponent``1"/>, however it caches the result in a dictionary, and will return the cached result if called again.
+            </summary>
+            <exception cref="T:UnityEngine.MissingComponentException"></exception>
+            <typeparam name="T">The type of component to search for.</typeparam>
+            <param name="allowNull">Whether it should throw an exception if it sees <see langword="null"/>, if not it will return the default value.</param>
+            <returns>The component specified by <typeparamref name="T"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Unity.CacheableBehaviour.GetChild``1(System.Boolean)">
+            <summary>
+            Similar to <see cref="M:UnityEngine.Component.GetComponentInChildren``1"/>, however it caches the result in a dictionary, and will return the cached result if called again.
+            </summary>
+            <exception cref="T:UnityEngine.MissingComponentException"></exception>
+            <typeparam name="T">The type of component to search for.</typeparam>
+            <param name="allowNull">Whether it should throw an exception if it sees <see langword="null"/>, if not it will return the default value.</param>
+            <returns>The component specified by <typeparamref name="T"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Unity.CacheableBehaviour.GetParent``1(System.Boolean)">
+            <summary>
+            Similar to <see cref="M:UnityEngine.Component.GetComponentInParent``1"/>, however it caches the result in a dictionary, and will return the cached result if called again.
+            </summary>
+            <exception cref="T:UnityEngine.MissingComponentException"></exception>
+            <typeparam name="T">The type of component to search for.</typeparam>
+            <param name="allowNull">Whether it should throw an exception if it sees <see langword="null"/>, if not it will return the default value.</param>
+            <returns>The component specified by <typeparamref name="T"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Unity.CacheableBehaviour.Cache``1(System.Func{``0[]},System.Boolean)">
+            <summary>
+            Caches the result of a function call that returns a component array in a dictionary, and will return the cached result if called again. Use this to alleviate expensive function calls.
+            </summary>
+            <exception cref="T:UnityEngine.MissingComponentException"></exception>
+            <typeparam name="T">The type of component to search for.</typeparam>
+            <param name="func">The expensive function to call, only if it hasn't ever been called by this method on the current instance before.</param>
+            <param name="allowNull">Whether it should throw an exception if it sees <see langword="null"/>, if not it will return the default value.</param>
+            <returns>The components specified by <typeparamref name="T"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Unity.CacheableBehaviour.Cache``1(System.Func{System.Boolean,``0[]},System.Boolean,System.Boolean)">
+            <summary>
+            Caches the result of a function call that returns a component array in a dictionary, and will return the cached result if called again. Use this to alleviate expensive function calls.
+            </summary>
+            <exception cref="T:UnityEngine.MissingComponentException"></exception>
+            <typeparam name="T">The type of component to search for.</typeparam>
+            <param name="func">The expensive function to call, only if it hasn't ever been called by this method on the current instance before.</param>
+            <param name="parameter">The argument to put in the expensive method call.</param>
+            <param name="allowNull">Whether it should throw an exception if it sees <see langword="null"/>, if not it will return the default value.</param>
+            <returns>The components specified by <typeparamref name="T"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Unity.CacheableBehaviour.Finds``1(System.Boolean)">
+            <summary>
+            Similar to <see cref="M:UnityEngine.Object.FindObjectsOfType``1"/>, however it caches the result in a dictionary, and will return the cached result if called again.
+            </summary>
+            <exception cref="T:UnityEngine.MissingComponentException"></exception>
+            <typeparam name="T">The type of component to search for.</typeparam>
+            <param name="allowNull">Whether it should throw an exception if it sees <see langword="null"/>, if not it will return the default value.</param>
+            <returns>The component specified by <typeparamref name="T"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Unity.CacheableBehaviour.Gets``1(System.Boolean)">
+            <summary>
+            Similar to <see cref="M:UnityEngine.GameObject.GetComponents``1"/>, however it caches the result in a dictionary, and will return the cached result if called again.
+            </summary>
+            <exception cref="T:UnityEngine.MissingComponentException"></exception>
+            <typeparam name="T">The type of component to search for.</typeparam>
+            <param name="allowNull">Whether it should throw an exception if it sees <see langword="null"/>, if not it will return the default value.</param>
+            <returns>The component specified by <typeparamref name="T"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Unity.CacheableBehaviour.GetChildren``1(System.Boolean,System.Boolean)">
+            <summary>
+            Similar to <see cref="M:UnityEngine.GameObject.GetComponentsInChildren``1(System.Boolean)"/>, however it caches the result in a dictionary, and will return the cached result if called again.
+            </summary>
+            <exception cref="T:UnityEngine.MissingComponentException"></exception>
+            <param name="includeInactive">Whether it should include inactive components.</param>
+            <typeparam name="T">The type of component to search for.</typeparam>
+            <param name="allowNull">Whether it should throw an exception if it sees <see langword="null"/>, if not it will return the default value.</param>
+            <returns>The component specified by <typeparamref name="T"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Unity.CacheableBehaviour.GetParents``1(System.Boolean,System.Boolean)">
+            <summary>
+            Similar to <see cref="M:UnityEngine.GameObject.GetComponentsInParent``1(System.Boolean)"/>, however it caches the result in a dictionary, and will return the cached result if called again.
+            </summary>
+            <exception cref="T:UnityEngine.MissingComponentException"></exception>
+            <typeparam name="T">The type of component to search for.</typeparam>
+            <param name="includeInactive">Whether it should include inactive components.</param>
+            <param name="allowNull">Whether it should throw an exception if it sees <see langword="null"/>, if not it will return the default value.</param>
+            <returns>The component specified by <typeparamref name="T"/>.</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,1036 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LibRibbonPlus.Core</name>
+    </assembly>
+    <members>
+        <member name="T:LibRibbonPlus.ChartBuilder">
+            <summary>
+            Builds a <see cref="T:LibRibbonPlus.Chart"/> instance from a <see cref="T:System.String"/> or file.
+            </summary>
+        </member>
+        <member name="M:LibRibbonPlus.ChartBuilder.Parse(System.String)">
+            <summary>
+            Parses content into an instance of <see cref="T:LibRibbonPlus.Chart"/>.
+            </summary>
+            <param name="contents">The contents.</param>
+            <returns>A modified <see cref="T:LibRibbonPlus.ChartBuilder"/> instance based on the data of <paramref name="contents"/>.</returns>
+        </member>
+        <member name="M:LibRibbonPlus.ChartBuilder.Parse(System.String[])">
+            <summary>
+            Parses content into an instance of <see cref="T:LibRibbonPlus.ChartBuilder"/>.
+            </summary>
+            <param name="contents">The contents.</param>
+            <returns>A modified <see cref="T:LibRibbonPlus.ChartBuilder"/> instance based on the data of <paramref name="contents"/>.</returns>
+        </member>
+        <member name="M:LibRibbonPlus.ChartBuilder.ParseAsync(LibRibbonPlus.Directory)">
+            <summary>
+            Parses a file into an instance of <see cref="T:LibRibbonPlus.Chart"/>.
+            </summary>
+            <param name="directory">The file's location.</param>
+            <returns>A modified <see cref="T:LibRibbonPlus.ChartBuilder"/> instance based on the data of <paramref name="directory"/>.</returns>
+        </member>
+        <member name="M:LibRibbonPlus.ChartBuilder.Build">
+            <summary>
+            Builds the chart.
+            </summary>
+            <returns>A value of <see cref="T:LibRibbonPlus.Chart"/> if it is valid, or <see langword="null"/>.</returns>
+        </member>
+        <member name="M:LibRibbonPlus.ChartBuilder.And(LibRibbonPlus.BeatsPerMinute[])">
+            <summary>
+            Appends one or more of <see cref="T:LibRibbonPlus.BeatsPerMinute"/>.
+            </summary>
+            <param name="beatsPerMinutes">The beats per minute changes to add.</param>
+            <returns>Itself.</returns>
+        </member>
+        <member name="M:LibRibbonPlus.ChartBuilder.And(System.Collections.Generic.IEnumerable{LibRibbonPlus.BeatsPerMinute})">
+            <summary>
+            Appends one or more of <see cref="T:LibRibbonPlus.BeatsPerMinute"/>.
+            </summary>
+            <param name="beatsPerMinutes">The beats per minute changes to add.</param>
+            <returns>Itself.</returns>
+        </member>
+        <member name="M:LibRibbonPlus.ChartBuilder.And(LibRibbonPlus.Note[])">
+            <summary>
+            Appends one or more of <see cref="T:LibRibbonPlus.Note"/>.
+            </summary>
+            <param name="notes">The notes to add.</param>
+            <returns>Itself.</returns>
+        </member>
+        <member name="M:LibRibbonPlus.ChartBuilder.And(System.Collections.Generic.IEnumerable{LibRibbonPlus.Note})">
+            <summary>
+            Appends one or more of <see cref="T:LibRibbonPlus.Note"/>.
+            </summary>
+            <param name="notes">The notes to add.</param>
+            <returns>Itself.</returns>
+        </member>
+        <member name="M:LibRibbonPlus.ChartBuilder.AndNot(LibRibbonPlus.BeatsPerMinute[])">
+            <summary>
+            Appends one or more of <see cref="T:LibRibbonPlus.BeatsPerMinute"/>.
+            </summary>
+            <param name="beatsPerMinutes">The beats per minute changes to add.</param>
+            <returns>Itself.</returns>
+        </member>
+        <member name="M:LibRibbonPlus.ChartBuilder.AndNot(System.Collections.Generic.IEnumerable{LibRibbonPlus.BeatsPerMinute})">
+            <summary>
+            Appends one or more of <see cref="T:LibRibbonPlus.BeatsPerMinute"/>.
+            </summary>
+            <param name="beatsPerMinutes">The beats per minute changes to add.</param>
+            <returns>Itself.</returns>
+        </member>
+        <member name="M:LibRibbonPlus.ChartBuilder.AndNot(LibRibbonPlus.Note[])">
+            <summary>
+            Appends one or more of <see cref="T:LibRibbonPlus.Note"/>.
+            </summary>
+            <param name="notes">The notes to add.</param>
+            <returns>Itself.</returns>
+        </member>
+        <member name="M:LibRibbonPlus.ChartBuilder.AndNot(System.Collections.Generic.IEnumerable{LibRibbonPlus.Note})">
+            <summary>
+            Appends one or more of <see cref="T:LibRibbonPlus.Note"/>.
+            </summary>
+            <param name="notes">The notes to add.</param>
+            <returns>Itself.</returns>
+        </member>
+        <member name="M:LibRibbonPlus.ChartBuilder.WithArtist(LibRibbonPlus.Label)">
+            <summary>
+            Inserts the artist.
+            </summary>
+            <param name="artist">The artist to add.</param>
+            <returns>Itself.</returns>
+        </member>
+        <member name="M:LibRibbonPlus.ChartBuilder.WithCharter(LibRibbonPlus.Label)">
+            <summary>
+            Inserts the charter.
+            </summary>
+            <param name="charter">The charter to add.</param>
+            <returns>Itself.</returns>
+        </member>
+        <member name="M:LibRibbonPlus.ChartBuilder.WithVersion(LibRibbonPlus.ChartFormatVersion)">
+            <summary>
+            Inserts the <see cref="T:LibRibbonPlus.ChartFormatVersion"/>.
+            </summary>
+            <param name="version">The version to add.</param>
+            <returns>Itself.</returns>
+        </member>
+        <member name="M:LibRibbonPlus.ChartBuilder.WithDifficulty(LibRibbonPlus.Difficulties)">
+            <summary>
+            Inserts <see cref="T:LibRibbonPlus.Difficulties"/>.
+            </summary>
+            <param name="difficulty">The difficulty to add.</param>
+            <returns>Itself.</returns>
+        </member>
+        <member name="M:LibRibbonPlus.ChartBuilder.WithDirectory(LibRibbonPlus.Directory)">
+            <summary>
+            Inserts the <see cref="T:LibRibbonPlus.Directory"/>.
+            </summary>
+            <param name="songDirectory">The song directory to add.</param>
+            <returns>Itself.</returns>
+        </member>
+        <member name="M:LibRibbonPlus.ChartBuilder.WithTitle(LibRibbonPlus.Label)">
+            <summary>
+            Inserts the title.
+            </summary>
+            <param name="title">The title to add.</param>
+            <returns>Itself.</returns>
+        </member>
+        <member name="T:LibRibbonPlus.NoteQueue">
+            <summary>
+            Represents a queue of notes used for rendering.
+            </summary>
+        </member>
+        <member name="M:LibRibbonPlus.NoteQueue.#ctor(System.Collections.Generic.IEnumerator{LibRibbonPlus.Note})">
+            <summary>
+            Initializes a new instance of the <see cref="T:LibRibbonPlus.NoteQueue"/> class.
+            </summary>
+            <param name="notes">The notes to queue.</param>
+        </member>
+        <member name="P:LibRibbonPlus.NoteQueue.Count">
+            <summary>
+            Gets the number of items in the queue.
+            </summary>
+        </member>
+        <member name="M:LibRibbonPlus.NoteQueue.GetEnumerator">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibRibbonPlus.NoteQueue.System#Collections#IEnumerable#GetEnumerator">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibRibbonPlus.NoteQueue.Refresh(LibRibbonPlus.TimingWindow)">
+            <summary>
+            Refreshes the queue with notes within the window specified.
+            </summary>
+            <param name="window">The timing window in which to remove or append notes.</param>
+        </member>
+        <member name="T:LibRibbonPlus.TooManyObstaclesException">
+            <summary>
+            Specifies that <see cref="T:LibRibbonPlus.Obstacles"/> has multiple values when one is expected.
+            </summary>
+        </member>
+        <member name="M:LibRibbonPlus.TooManyObstaclesException.AssertOnlyOneOf(LibRibbonPlus.Obstacles)">
+            <summary>
+            Asserts that an instance of <see cref="T:LibRibbonPlus.Obstacles"/> has only one value.
+            </summary>
+            <param name="obstacle">The <see cref="T:LibRibbonPlus.Obstacles"/> to assert.</param>
+        </member>
+        <member name="T:LibRibbonPlus.InputHandler">
+            <summary>
+            A callback for handling an input.
+            </summary>
+            <param name="input">The input from the user.</param>
+        </member>
+        <member name="T:LibRibbonPlus.NoteHandler">
+            <summary>
+            A callback for handling a note that has been passed.
+            </summary>
+            <param name="note">The current note that has been passed.</param>
+        </member>
+        <member name="T:LibRibbonPlus.ChartBuilderState">
+            <summary>
+            Represents the different states that a <see cref="T:LibRibbonPlus.ChartBuilder"/> can have.
+            </summary>
+        </member>
+        <member name="F:LibRibbonPlus.ChartBuilderState.IsProcessingVersion">
+            <summary>
+            Indicates that the <see cref="T:LibRibbonPlus.ChartBuilder"/> is processing the version.
+            </summary>
+        </member>
+        <member name="F:LibRibbonPlus.ChartBuilderState.IsProcessingMetadata">
+            <summary>
+            Indicates that the <see cref="T:LibRibbonPlus.ChartBuilder"/> is processing the metadata.
+            </summary>
+        </member>
+        <member name="F:LibRibbonPlus.ChartBuilderState.IsProcessingBeatsPerMinute">
+            <summary>
+            Indicates that the <see cref="T:LibRibbonPlus.ChartBuilder"/> is processing the beats per minute collections.
+            </summary>
+        </member>
+        <member name="F:LibRibbonPlus.ChartBuilderState.IsProcessingNotes">
+            <summary>
+            Indicates that the <see cref="T:LibRibbonPlus.ChartBuilder"/> is processing the note collections.
+            </summary>
+        </member>
+        <member name="T:LibRibbonPlus.Difficulties">
+            <summary>
+            Represents all kinds of difficulties, part of chart metadata.
+            </summary>
+        </member>
+        <member name="F:LibRibbonPlus.Difficulties.Unknown">
+            <summary>
+            Indicates that the chart's difficulty is unknown.
+            </summary>
+        </member>
+        <member name="F:LibRibbonPlus.Difficulties.Bronze">
+            <summary>
+            Indicates that the chart is easy.
+            </summary>
+        </member>
+        <member name="F:LibRibbonPlus.Difficulties.Silver">
+            <summary>
+            Indicates that the chart is medium.
+            </summary>
+        </member>
+        <member name="F:LibRibbonPlus.Difficulties.Gold">
+            <summary>
+            Indicates that the chart is hard.
+            </summary>
+        </member>
+        <member name="T:LibRibbonPlus.Obstacles">
+            <summary>
+            Represents all kinds of obstacles, part of chart metadata.
+            </summary>
+        </member>
+        <member name="F:LibRibbonPlus.Obstacles.None">
+            <summary>
+            Indicates that there is no note.
+            </summary>
+        </member>
+        <member name="F:LibRibbonPlus.Obstacles.Block">
+            <summary>
+            Indicates that there is a note of at least type block, which requires the left trigger to be pressed on the controller by default.
+            </summary>
+        </member>
+        <member name="F:LibRibbonPlus.Obstacles.Pit">
+            <summary>
+            Indicates that there is a note of at least type pit, which requires d-pad down to be pressed on the controller by default.
+            </summary>
+        </member>
+        <member name="F:LibRibbonPlus.Obstacles.Wave">
+            <summary>
+            Indicates that there is a note of at least type wave, which requires the x button to be pressed on the controller by default.
+            </summary>
+        </member>
+        <member name="F:LibRibbonPlus.Obstacles.Loop">
+            <summary>
+            Indicates that there is a note of at least type loop, which requires the right trigger to be pressed on the controller by default.
+            </summary>
+        </member>
+        <member name="T:LibRibbonPlus.Enums">
+            <summary>
+            Implementations for <see cref="T:LibRibbonPlus.Difficulties"/> and <see cref="P:LibRibbonPlus.Enums.AllObstacles"/>.
+            </summary>
+        </member>
+        <member name="P:LibRibbonPlus.Enums.AllObstacles">
+            <summary>
+            Gets all of the values of <see cref="P:LibRibbonPlus.Enums.AllObstacles"/> individually.
+            </summary>
+        </member>
+        <member name="M:LibRibbonPlus.Enums.Count(LibRibbonPlus.Obstacles)">
+            <summary>
+            Gets the number of obstacles in an instance of <see cref="P:LibRibbonPlus.Enums.AllObstacles"/>.
+            </summary>
+            <param name="obstacle">The instance of <see cref="P:LibRibbonPlus.Enums.AllObstacles"/> to get the obstacles of.</param>
+            <returns>An <see cref="T:System.Int32"/> representing the number of bits flipped to 1, indicating a presense.</returns>
+        </member>
+        <member name="M:LibRibbonPlus.Enums.ToDifficulties(System.String)">
+            <summary>
+            Converts a string to <see cref="T:LibRibbonPlus.Difficulties"/>.
+            </summary>
+            <param name="difficulty">The <see cref="T:System.String"/> representation of <see cref="T:LibRibbonPlus.Difficulties"/> to convert.</param>
+            <returns>The value of <see cref="T:LibRibbonPlus.Difficulties"/> from its name, or <see cref="F:LibRibbonPlus.Difficulties.Unknown"/>.</returns>
+        </member>
+        <member name="M:LibRibbonPlus.Enums.Split(LibRibbonPlus.Obstacles)">
+            <summary>
+            Splits an <see cref="T:LibRibbonPlus.Obstacles"/> into individual parts.
+            </summary>
+            <param name="obstacle">The <see cref="T:LibRibbonPlus.Obstacles"/> to split.</param>
+            <returns>A collection of <see cref="T:LibRibbonPlus.Obstacles"/> based on the parameter <paramref name="obstacle"/> for each flag that is set <see langword="true"/>.</returns>
+        </member>
+        <member name="M:LibRibbonPlus.Enums.AssertOnlyOneOf(LibRibbonPlus.Obstacles)">
+            <summary>
+            Extension method of <see cref="M:LibRibbonPlus.TooManyObstaclesException.AssertOnlyOneOf(LibRibbonPlus.Obstacles)"/>.
+            </summary>
+            <param name="obstacle">The <see cref="T:LibRibbonPlus.Obstacles"/> to assert.</param>
+            <returns>Itself.</returns>
+        </member>
+        <member name="M:LibRibbonPlus.Enums.ToObstacles(System.String)">
+            <summary>
+            Converts a string to <see cref="T:LibRibbonPlus.Obstacles"/>.
+            </summary>
+            <param name="obstacles">The <see cref="T:System.String"/> representation of <see cref="T:LibRibbonPlus.Obstacles"/> to convert.</param>
+            <returns>The value of <see cref="T:LibRibbonPlus.Obstacles"/> from its name, or <see cref="F:LibRibbonPlus.Obstacles.None"/>.</returns>
+        </member>
+        <member name="T:LibRibbonPlus.InterfaceExtensions">
+            <summary>
+            Provides extension methods for interfaces.
+            </summary>
+        </member>
+        <member name="M:LibRibbonPlus.InterfaceExtensions.ToStringInvariant(System.IConvertible)">
+            <summary>
+            Converts an <see cref="T:System.IConvertible"/> to a <see cref="T:System.String"/> with <see cref="P:System.Globalization.CultureInfo.InvariantCulture"/>.
+            </summary>
+            <param name="convertible">The value to get a <see cref="T:System.String"/> representation of.</param>
+            <returns>A culture-invariant <see cref="T:System.String"/> representation of <paramref name="convertible"/>.</returns>
+        </member>
+        <member name="T:LibRibbonPlus.IChartExtractor">
+            <summary>
+            An interface to indicate something that can extract information from a chart.
+            </summary>
+        </member>
+        <member name="M:LibRibbonPlus.IChartExtractor.Set(LibRibbonPlus.Chart)">
+            <summary>
+            The method to extract data from a given chart.
+            </summary>
+            <param name="chart">The chart to extract data from.</param>
+        </member>
+        <member name="T:LibRibbonPlus.ITimed">
+            <summary>
+            An interface which contains data that indicates an event in a specific time.
+            </summary>
+        </member>
+        <member name="P:LibRibbonPlus.ITimed.Interval">
+            <summary>
+            Gets the interval in which something happens.
+            </summary>
+        </member>
+        <member name="T:LibRibbonPlus.BeatsPerMinuteCollection">
+            <summary>
+            Encapsulates an <see cref="T:System.Array"/> of <see cref="T:LibRibbonPlus.BeatsPerMinute"/>.
+            </summary>
+            <param name="Collection">The collection to encapsulate.</param>
+        </member>
+        <member name="M:LibRibbonPlus.BeatsPerMinuteCollection.#ctor(LibRibbonPlus.BeatsPerMinute[])">
+            <summary>
+            Encapsulates an <see cref="T:System.Array"/> of <see cref="T:LibRibbonPlus.BeatsPerMinute"/>.
+            </summary>
+            <param name="Collection">The collection to encapsulate.</param>
+        </member>
+        <member name="P:LibRibbonPlus.BeatsPerMinuteCollection.Blank">
+            <summary>
+            Gets the explicit default value of this type.
+            </summary>
+        </member>
+        <member name="M:LibRibbonPlus.BeatsPerMinuteCollection.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="T:LibRibbonPlus.Chart">
+            <summary>
+            Represents an entire object of a chart or level.
+            </summary>
+            <param name="Notes">The collection of notes.</param>
+            <param name="BeatsPerMinuteChanges">The collection of beats per minute changes.</param>
+            <param name="Metadata">Any chart metadata.</param>
+        </member>
+        <member name="M:LibRibbonPlus.Chart.#ctor(LibRibbonPlus.NoteCollection,LibRibbonPlus.BeatsPerMinuteCollection,LibRibbonPlus.Metadata)">
+            <summary>
+            Represents an entire object of a chart or level.
+            </summary>
+            <param name="Notes">The collection of notes.</param>
+            <param name="BeatsPerMinuteChanges">The collection of beats per minute changes.</param>
+            <param name="Metadata">Any chart metadata.</param>
+        </member>
+        <member name="F:LibRibbonPlus.Chart.MetadataTag">
+            <summary>
+            Contains the metadata tag used to switch context to metadata.
+            </summary>
+        </member>
+        <member name="F:LibRibbonPlus.Chart.BeatsPerMinuteTag">
+            <summary>
+            Contains the beats per minute tag used to switch context to metadata.
+            </summary>
+        </member>
+        <member name="F:LibRibbonPlus.Chart.NoteTag">
+            <summary>
+            Contains the note tag used to switch context to notes.
+            </summary>
+        </member>
+        <member name="F:LibRibbonPlus.Chart.ArtistTag">
+            <summary>
+            Contains the artist tag used to specify the <see cref="P:LibRibbonPlus.SongMetadata.Artist"/>.
+            </summary>
+        </member>
+        <member name="F:LibRibbonPlus.Chart.CharterTag">
+            <summary>
+            Contains the charter tag used to specify the <see cref="P:LibRibbonPlus.ChartMetadata.Charter"/>.
+            </summary>
+        </member>
+        <member name="F:LibRibbonPlus.Chart.DifficultyTag">
+            <summary>
+            Contains the difficulty tag used to specify <see cref="T:LibRibbonPlus.Difficulties"/>.
+            </summary>
+        </member>
+        <member name="F:LibRibbonPlus.Chart.DirectoryTag">
+            <summary>
+            Contains the directory tag used to specify <see cref="T:LibRibbonPlus.Directory"/>.
+            </summary>
+        </member>
+        <member name="F:LibRibbonPlus.Chart.TitleTag">
+            <summary>
+            Contains the title tag used to specify the <see cref="P:LibRibbonPlus.SongMetadata.Title"/>.
+            </summary>
+        </member>
+        <member name="P:LibRibbonPlus.Chart.Blank">
+            <summary>
+            Gets the explicit default value of this type.
+            </summary>
+        </member>
+        <member name="P:LibRibbonPlus.Chart.Sha256">
+            <summary>
+            Gets the <see cref="T:System.Security.Cryptography.SHA256"/> hash of this instance.
+            </summary>
+        </member>
+        <member name="M:LibRibbonPlus.Chart.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="T:LibRibbonPlus.ChartMetadata">
+            <summary>
+            Represents metadata that is strictly related to the chart.
+            </summary>
+            <param name="Charter">Credit to whoever charted the chart.</param>
+            <param name="Difficulty">The difficulty of the chart.</param>
+        </member>
+        <member name="M:LibRibbonPlus.ChartMetadata.#ctor(LibRibbonPlus.Label,LibRibbonPlus.Difficulties)">
+            <summary>
+            Represents metadata that is strictly related to the chart.
+            </summary>
+            <param name="Charter">Credit to whoever charted the chart.</param>
+            <param name="Difficulty">The difficulty of the chart.</param>
+        </member>
+        <member name="P:LibRibbonPlus.ChartMetadata.Blank">
+            <summary>
+            Gets the explicit default value of this type.
+            </summary>
+        </member>
+        <member name="T:LibRibbonPlus.Directory">
+            <summary>
+            Represents a song directory.
+            </summary>
+            <param name="Path">The path to the song.</param>
+            <param name="IsRelative">Determines whether this path is relative or absolute.</param>
+        </member>
+        <member name="M:LibRibbonPlus.Directory.#ctor(System.String,System.Boolean)">
+            <summary>
+            Represents a song directory.
+            </summary>
+            <param name="Path">The path to the song.</param>
+            <param name="IsRelative">Determines whether this path is relative or absolute.</param>
+        </member>
+        <member name="P:LibRibbonPlus.Directory.Blank">
+            <summary>
+            Gets the explicit default value of this type.
+            </summary>
+        </member>
+        <member name="M:LibRibbonPlus.Directory.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibRibbonPlus.Directory.ReadAsync">
+            <summary>
+            Reads a file asyncronously.
+            </summary>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> to open and read a file.</returns>
+        </member>
+        <member name="T:LibRibbonPlus.FormatTryer">
+            <summary>
+            Allows for shorthand in <see cref="T:LibRibbonPlus.ChartBuilder"/>.
+            </summary>
+            <param name="Prefix">The prefix to identify the action with.</param>
+            <param name="Apply">The action to run when the <paramref name="Prefix"/> is applied.</param>
+        </member>
+        <member name="M:LibRibbonPlus.FormatTryer.#ctor(System.String,System.Action{System.String})">
+            <summary>
+            Allows for shorthand in <see cref="T:LibRibbonPlus.ChartBuilder"/>.
+            </summary>
+            <param name="Prefix">The prefix to identify the action with.</param>
+            <param name="Apply">The action to run when the <paramref name="Prefix"/> is applied.</param>
+        </member>
+        <member name="M:LibRibbonPlus.FormatTryer.op_Implicit(System.ValueTuple{System.String,System.Action{System.String}})~LibRibbonPlus.FormatTryer">
+            <summary>
+            Constructs a <see cref="T:LibRibbonPlus.FormatTryer"/> from its tuple representation.
+            </summary>
+            <param name="tuple">The tuple to construct <see cref="T:LibRibbonPlus.FormatTryer"/> from.</param>
+        </member>
+        <member name="T:LibRibbonPlus.Label">
+            <summary>
+            Encapsulates an item that is labelable.
+            </summary>
+            <param name="Name">The name.</param>
+        </member>
+        <member name="M:LibRibbonPlus.Label.#ctor(System.String)">
+            <summary>
+            Encapsulates an item that is labelable.
+            </summary>
+            <param name="Name">The name.</param>
+        </member>
+        <member name="P:LibRibbonPlus.Label.Blank">
+            <summary>
+            Gets the explicit default value of this type.
+            </summary>
+        </member>
+        <member name="M:LibRibbonPlus.Label.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="T:LibRibbonPlus.Metadata">
+            <summary>
+            Represents data of a chart other than the chart itself.
+            </summary>
+            <param name="Song">Song-related metadata.</param>
+            <param name="Chart">Chart-related metadata.</param>
+            <param name="Version">The version of the format that was used to create this instance.</param>
+        </member>
+        <member name="M:LibRibbonPlus.Metadata.#ctor(LibRibbonPlus.SongMetadata,LibRibbonPlus.ChartMetadata,LibRibbonPlus.ChartFormatVersion)">
+            <summary>
+            Represents data of a chart other than the chart itself.
+            </summary>
+            <param name="Song">Song-related metadata.</param>
+            <param name="Chart">Chart-related metadata.</param>
+            <param name="Version">The version of the format that was used to create this instance.</param>
+        </member>
+        <member name="P:LibRibbonPlus.Metadata.Blank">
+            <summary>
+            Gets the explicit default value of this type.
+            </summary>
+        </member>
+        <member name="T:LibRibbonPlus.Note">
+            <summary>
+            Encapsulates data for a single note.
+            </summary>
+            <param name="Kind">The types of obstacles this note contains.</param>
+            <param name="Velocity">The speed in which the obstacle flies.</param>
+            <param name="Interval">The specific point in which the obstacle is expected to be reached.</param>
+        </member>
+        <member name="M:LibRibbonPlus.Note.#ctor(LibRibbonPlus.Obstacles,LibRibbonPlus.Velocity,LibRibbonPlus.Interval)">
+            <summary>
+            Encapsulates data for a single note.
+            </summary>
+            <param name="Kind">The types of obstacles this note contains.</param>
+            <param name="Velocity">The speed in which the obstacle flies.</param>
+            <param name="Interval">The specific point in which the obstacle is expected to be reached.</param>
+        </member>
+        <member name="F:LibRibbonPlus.Note.At">
+            <summary>
+            Contains the separator between time and speed.
+            </summary>
+        </member>
+        <member name="F:LibRibbonPlus.Note.Separator">
+            <summary>
+            Contains the separator for a prefix and the raw interval.
+            </summary>
+        </member>
+        <member name="P:LibRibbonPlus.Note.IncreasedShake">
+            <summary>
+            Gets or sets a value indicating how much increased shake should be added to this note.
+            </summary>
+        </member>
+        <member name="P:LibRibbonPlus.Note.Blank">
+            <summary>
+            Gets the explicit default value of this type.
+            </summary>
+        </member>
+        <member name="M:LibRibbonPlus.Note.TryParse(LibRibbonPlus.Chars,LibRibbonPlus.Note@)">
+            <summary>
+            Tries to create a new instance of <see cref="T:LibRibbonPlus.Note"/> from a given <see cref="T:LibRibbonPlus.Chars"/>.
+            </summary>
+            <param name="chars">The sequence of characters to parse.</param>
+            <param name="note">The result, or <see cref="P:LibRibbonPlus.Note.Blank"/>.</param>
+            <returns>The value <see langword="true"/> if the parse is successful, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:LibRibbonPlus.Note.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="T:LibRibbonPlus.NoteCollection">
+            <summary>
+            Encapsulates an <see cref="T:System.Array"/> of <see cref="T:LibRibbonPlus.Note"/>.
+            </summary>
+            <param name="Collection">The collection to encapsulate.</param>
+        </member>
+        <member name="M:LibRibbonPlus.NoteCollection.#ctor(LibRibbonPlus.Note[])">
+            <summary>
+            Encapsulates an <see cref="T:System.Array"/> of <see cref="T:LibRibbonPlus.Note"/>.
+            </summary>
+            <param name="Collection">The collection to encapsulate.</param>
+        </member>
+        <member name="P:LibRibbonPlus.NoteCollection.Blank">
+            <summary>
+            Gets the explicit default value of this type.
+            </summary>
+        </member>
+        <member name="P:LibRibbonPlus.NoteCollection.IsOutOfRange">
+            <summary>
+            Gets a value indicating whether it isn't currently looking at any note.
+            </summary>
+        </member>
+        <member name="P:LibRibbonPlus.NoteCollection.Current">
+            <summary>
+            Gets the current note that this collection is representing.
+            </summary>
+        </member>
+        <member name="M:LibRibbonPlus.NoteCollection.MoveNext">
+            <summary>
+            Moves to the next note in the collection.
+            </summary>
+            <returns>The value <see langword="true"/> if there is a next value, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:LibRibbonPlus.NoteCollection.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibRibbonPlus.NoteCollection.GetEnumerator">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibRibbonPlus.NoteCollection.System#Collections#IEnumerable#GetEnumerator">
+            <inheritdoc/>
+        </member>
+        <member name="T:LibRibbonPlus.SongMetadata">
+            <summary>
+            Represents metadata that is strictly related to the song.
+            </summary>
+            <param name="Title">The title of the song.</param>
+            <param name="Artist">The artist of the song.</param>
+            <param name="Directory">The relative directory to a file which contains the song.</param>
+        </member>
+        <member name="M:LibRibbonPlus.SongMetadata.#ctor(LibRibbonPlus.Label,LibRibbonPlus.Label,LibRibbonPlus.Directory)">
+            <summary>
+            Represents metadata that is strictly related to the song.
+            </summary>
+            <param name="Title">The title of the song.</param>
+            <param name="Artist">The artist of the song.</param>
+            <param name="Directory">The relative directory to a file which contains the song.</param>
+        </member>
+        <member name="P:LibRibbonPlus.SongMetadata.Blank">
+            <summary>
+            Gets the explicit default value of this type.
+            </summary>
+        </member>
+        <member name="T:LibRibbonPlus.BeatsPerMinute">
+            <summary>
+            Represents a tempo in music.
+            </summary>
+            <param name="Tempo">The amount of beats within one minute.</param>
+            <param name="Interval">The occurence in time of when the tempo is applied.</param>
+        </member>
+        <member name="M:LibRibbonPlus.BeatsPerMinute.#ctor(System.Single,LibRibbonPlus.Interval)">
+            <summary>
+            Represents a tempo in music.
+            </summary>
+            <param name="Tempo">The amount of beats within one minute.</param>
+            <param name="Interval">The occurence in time of when the tempo is applied.</param>
+        </member>
+        <member name="F:LibRibbonPlus.BeatsPerMinute.Separator">
+            <summary>
+            Contains the separator for a prefix and the raw interval.
+            </summary>
+        </member>
+        <member name="P:LibRibbonPlus.BeatsPerMinute.Blank">
+            <summary>
+            Gets the explicit default value of this type.
+            </summary>
+        </member>
+        <member name="M:LibRibbonPlus.BeatsPerMinute.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibRibbonPlus.BeatsPerMinute.TryParse(LibRibbonPlus.Chars,LibRibbonPlus.BeatsPerMinute@)">
+            <summary>
+            Tries to create a new instance of <see cref="T:LibRibbonPlus.BeatsPerMinute"/> from a given <see cref="T:LibRibbonPlus.Chars"/>.
+            </summary>
+            <param name="chars">The sequence of characters to parse.</param>
+            <param name="beatsPerMinute">The result, or <see cref="P:LibRibbonPlus.BeatsPerMinute.Blank"/>.</param>
+            <returns>The value <see langword="true"/> if the parse is successful, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="T:LibRibbonPlus.Chars">
+            <summary>
+            Represents a span of characters.
+            </summary>
+        </member>
+        <member name="M:LibRibbonPlus.Chars.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:LibRibbonPlus.Chars"/> struct.
+            </summary>
+            <param name="collection">The collection of characters to encapsulate.</param>
+        </member>
+        <member name="M:LibRibbonPlus.Chars.#ctor(System.String,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:LibRibbonPlus.Chars"/> struct.
+            </summary>
+            <param name="collection">The collection of characters to encapsulate.</param>
+            <param name="start">The index to treat as the start.</param>
+            <param name="end">The index to treat as the end.</param>
+        </member>
+        <member name="M:LibRibbonPlus.Chars.#ctor(System.String,System.Index,System.Index)">
+            <summary>
+            Initializes a new instance of the <see cref="T:LibRibbonPlus.Chars"/> struct.
+            </summary>
+            <param name="collection">The collection of characters to encapsulate.</param>
+            <param name="start">The index to treat as the start.</param>
+            <param name="end">The index to treat as the end.</param>
+        </member>
+        <member name="M:LibRibbonPlus.Chars.#ctor(System.String,System.Range)">
+            <summary>
+            Initializes a new instance of the <see cref="T:LibRibbonPlus.Chars"/> struct.
+            </summary>
+            <param name="collection">The collection of characters to encapsulate.</param>
+            <param name="range">The range of indices to use.</param>
+        </member>
+        <member name="P:LibRibbonPlus.Chars.Empty">
+            <summary>
+            Gets a representation of an empty span.
+            </summary>
+        </member>
+        <member name="P:LibRibbonPlus.Chars.IsEmpty">
+            <summary>
+            Gets a value indicating whether the length is 0.
+            </summary>
+        </member>
+        <member name="P:LibRibbonPlus.Chars.Length">
+            <summary>
+            Gets the length of the span.
+            </summary>
+        </member>
+        <member name="P:LibRibbonPlus.Chars.Item(System.Int32)">
+            <summary>
+            Index into this instance of <see cref="T:LibRibbonPlus.Chars"/>.
+            </summary>
+            <param name="index">The <see cref="T:System.Int32"/> to index.</param>
+            <returns>The <see cref="T:System.Char"/> which represents the index of this <see cref="T:LibRibbonPlus.Chars"/>.</returns>
+        </member>
+        <member name="P:LibRibbonPlus.Chars.Item(System.Index)">
+            <summary>
+            Index into this instance of <see cref="T:LibRibbonPlus.Chars"/>.
+            </summary>
+            <param name="index">The <see cref="T:System.Index"/> to index.</param>
+            <returns>The <see cref="T:System.Char"/> which represents the index of this <see cref="T:LibRibbonPlus.Chars"/>.</returns>
+        </member>
+        <member name="P:LibRibbonPlus.Chars.Item(System.Range)">
+            <summary>
+            Index into this instance of <see cref="T:LibRibbonPlus.Chars"/>.
+            </summary>
+            <param name="range">The <see cref="T:System.Range"/> to index.</param>
+            <returns>A sub-<see cref="T:LibRibbonPlus.Chars"/> which represents the range of this <see cref="T:LibRibbonPlus.Chars"/>.</returns>
+        </member>
+        <member name="M:LibRibbonPlus.Chars.op_Implicit(System.String)~LibRibbonPlus.Chars">
+            <summary>
+            Converts a <see cref="T:System.String"/> to <see cref="T:LibRibbonPlus.Chars"/>.
+            </summary>
+            <param name="chars">The sequence of characters to convert.</param>
+        </member>
+        <member name="M:LibRibbonPlus.Chars.op_Explicit(LibRibbonPlus.Chars)~System.String">
+            <summary>
+            Converts <see cref="T:LibRibbonPlus.Chars"/> to <see cref="T:System.String"/>. This allocates memory on the heap.
+            </summary>
+            <param name="chars">The sequence of characters to convert.</param>
+        </member>
+        <member name="M:LibRibbonPlus.Chars.op_Equality(LibRibbonPlus.Chars,LibRibbonPlus.Chars)">
+            <summary>
+            Compares two <see cref="T:LibRibbonPlus.Chars"/> to see if they contain the same sequence.
+            </summary>
+            <param name="left">The first <see cref="T:LibRibbonPlus.Chars"/> to compare.</param>
+            <param name="right">The second <see cref="T:LibRibbonPlus.Chars"/> to compare.</param>
+            <returns>The value <see langword="true"/> if <see cref="T:LibRibbonPlus.Chars"/> contains the same slice of characters, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:LibRibbonPlus.Chars.op_Inequality(LibRibbonPlus.Chars,LibRibbonPlus.Chars)">
+            <summary>
+            Compares two <see cref="T:LibRibbonPlus.Chars"/> to see if they don't contain the same sequence.
+            </summary>
+            <param name="left">The first <see cref="T:LibRibbonPlus.Chars"/> to compare.</param>
+            <param name="right">The second <see cref="T:LibRibbonPlus.Chars"/> to compare.</param>
+            <returns>The value <see langword="false"/> if <see cref="T:LibRibbonPlus.Chars"/> contains the same slice of characters, otherwise <see langword="true"/>.</returns>
+        </member>
+        <member name="M:LibRibbonPlus.Chars.Equals(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibRibbonPlus.Chars.TrySplit(LibRibbonPlus.Chars,LibRibbonPlus.Chars@,LibRibbonPlus.Chars@)">
+            <summary>
+            Splits <see cref="T:LibRibbonPlus.Chars"/> into two based on the first find of a separator sequence. Neither <see cref="T:LibRibbonPlus.Chars"/> include this sequence.
+            </summary>
+            <param name="separator">The separator of the two outputted <see cref="T:LibRibbonPlus.Chars"/>.</param>
+            <param name="before">The sequence of characters before <paramref name="separator"/>.</param>
+            <param name="after">The sequence of characters after <paramref name="separator"/>.</param>
+            <returns>The value <see langword="true"/> if <paramref name="separator"/> is part of this instance, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:LibRibbonPlus.Chars.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibRibbonPlus.Chars.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibRibbonPlus.Chars.GetEnumerator">
+            <summary>
+            Gets the enumerator.
+            </summary>
+            <returns>The enumerator.</returns>
+        </member>
+        <member name="T:LibRibbonPlus.Chars.Enumerator">
+            <summary>
+            An enumerator for this type.
+            </summary>
+        </member>
+        <member name="M:LibRibbonPlus.Chars.Enumerator.#ctor(LibRibbonPlus.Chars)">
+            <summary>
+            Initializes a new instance of the <see cref="T:LibRibbonPlus.Chars.Enumerator"/> struct.
+            </summary>
+            <param name="chars">The span of characters to encapsulate.</param>
+        </member>
+        <member name="P:LibRibbonPlus.Chars.Enumerator.Current">
+            <summary>
+            Gets the current <see cref="T:System.Char"/>.
+            </summary>
+        </member>
+        <member name="M:LibRibbonPlus.Chars.Enumerator.MoveNext">
+            <summary>
+            Goes to the next index, returns whether or not it can.
+            </summary>
+            <returns>The value <see langword="true"/> if there is a next character, else <see langword="false"/>.</returns>
+        </member>
+        <member name="T:LibRibbonPlus.ChartFormatVersion">
+            <summary>
+            Stores a chart format version.
+            </summary>
+            <param name="Major">The version number in major.</param>
+        </member>
+        <member name="M:LibRibbonPlus.ChartFormatVersion.#ctor(System.UInt32)">
+            <summary>
+            Stores a chart format version.
+            </summary>
+            <param name="Major">The version number in major.</param>
+        </member>
+        <member name="P:LibRibbonPlus.ChartFormatVersion.Blank">
+            <summary>
+            Gets the explicit default value of this type.
+            </summary>
+        </member>
+        <member name="M:LibRibbonPlus.ChartFormatVersion.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibRibbonPlus.ChartFormatVersion.TryParse(LibRibbonPlus.Chars,LibRibbonPlus.ChartFormatVersion@)">
+            <summary>
+            Tries to create a new instance of <see cref="T:LibRibbonPlus.ChartFormatVersion"/> from a given <see cref="T:LibRibbonPlus.Chars"/>.
+            </summary>
+            <param name="chars">The sequence of characters to parse.</param>
+            <param name="version">The result, or <see cref="P:LibRibbonPlus.ChartFormatVersion.Blank"/>.</param>
+            <returns>The value <see langword="true"/> if the parse is successful, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="T:LibRibbonPlus.EnumeratedRange">
+            <summary>
+            Represents an enumerable range.
+            </summary>
+            <param name="Start">The index to start.</param>
+            <param name="End">The index to end.</param>
+        </member>
+        <member name="M:LibRibbonPlus.EnumeratedRange.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Represents an enumerable range.
+            </summary>
+            <param name="Start">The index to start.</param>
+            <param name="End">The index to end.</param>
+        </member>
+        <member name="M:LibRibbonPlus.EnumeratedRange.Step">
+            <summary>
+            Moves to the next number, wrapping around back to <see cref="P:LibRibbonPlus.EnumeratedRange.Start"/> if the current value reaches <see cref="P:LibRibbonPlus.EnumeratedRange.End"/>.
+            </summary>
+            <returns>The new value of the current value.</returns>
+        </member>
+        <member name="T:LibRibbonPlus.Interval">
+            <summary>
+            Encapsulates a number that works similarily to <see cref="T:System.TimeSpan"/> which specifies an occurence at a specific time.
+            </summary>
+            <param name="Microseconds">The amount of microseconds elapsed before something happens.</param>
+        </member>
+        <member name="M:LibRibbonPlus.Interval.#ctor(System.Int64)">
+            <summary>
+            Encapsulates a number that works similarily to <see cref="T:System.TimeSpan"/> which specifies an occurence at a specific time.
+            </summary>
+            <param name="Microseconds">The amount of microseconds elapsed before something happens.</param>
+        </member>
+        <member name="P:LibRibbonPlus.Interval.Leniency">
+            <summary>
+            Gets the amount of microseconds the main timing window of the game is.
+            </summary>
+        </member>
+        <member name="P:LibRibbonPlus.Interval.Rendering">
+            <summary>
+            Gets the amount of microseconds the main rendering window of the game is.
+            </summary>
+        </member>
+        <member name="M:LibRibbonPlus.Interval.op_Explicit(LibRibbonPlus.Interval)~System.Single">
+            <summary>
+            Converts an <see cref="T:LibRibbonPlus.Interval"/> to a <see cref="T:System.Single"/> represented in microseconds.
+            </summary>
+            <param name="interval">The amount of time.</param>
+        </member>
+        <member name="M:LibRibbonPlus.Interval.op_Explicit(System.Single)~LibRibbonPlus.Interval">
+            <summary>
+            Converts a <see cref="T:System.Single"/> represented in seconds to an instance of <see cref="T:LibRibbonPlus.Interval"/>.
+            </summary>
+            <param name="seconds">The amount of seconds.</param>
+        </member>
+        <member name="M:LibRibbonPlus.Interval.op_GreaterThan(LibRibbonPlus.Interval,LibRibbonPlus.Interval)">
+            <summary>
+            Compares two <see cref="T:LibRibbonPlus.Interval"/> values to see if the left-hand side is larger than the right.
+            </summary>
+            <param name="left">The first <see cref="T:LibRibbonPlus.Interval"/> to compare.</param>
+            <param name="right">The second <see cref="T:LibRibbonPlus.Interval"/> to compare.</param>
+            <returns>The value <see langword="true"/> if <paramref name="left"/> is larger than <paramref name="right"/>, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:LibRibbonPlus.Interval.op_LessThan(LibRibbonPlus.Interval,LibRibbonPlus.Interval)">
+            <summary>
+            Compares two <see cref="T:LibRibbonPlus.Interval"/> values to see if the left-hand side is smaller than the right.
+            </summary>
+            <param name="left">The first <see cref="T:LibRibbonPlus.Interval"/> to compare.</param>
+            <param name="right">The second <see cref="T:LibRibbonPlus.Interval"/> to compare.</param>
+            <returns>The value <see langword="true"/> if <paramref name="left"/> is larger than <paramref name="right"/>, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:LibRibbonPlus.Interval.op_GreaterThanOrEqual(LibRibbonPlus.Interval,LibRibbonPlus.Interval)">
+            <summary>
+            Compares two <see cref="T:LibRibbonPlus.Interval"/> values to see if the left-hand side is larger or equal the right.
+            </summary>
+            <param name="left">The first <see cref="T:LibRibbonPlus.Interval"/> to compare.</param>
+            <param name="right">The second <see cref="T:LibRibbonPlus.Interval"/> to compare.</param>
+            <returns>The value <see langword="true"/> if <paramref name="left"/> is larger than <paramref name="right"/>, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:LibRibbonPlus.Interval.op_LessThanOrEqual(LibRibbonPlus.Interval,LibRibbonPlus.Interval)">
+            <summary>
+            Compares two <see cref="T:LibRibbonPlus.Interval"/> values to see if the left-hand side is smaller or equal the right.
+            </summary>
+            <param name="left">The first <see cref="T:LibRibbonPlus.Interval"/> to compare.</param>
+            <param name="right">The second <see cref="T:LibRibbonPlus.Interval"/> to compare.</param>
+            <returns>The value <see langword="true"/> if <paramref name="left"/> is larger than <paramref name="right"/>, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:LibRibbonPlus.Interval.op_Addition(LibRibbonPlus.Interval,LibRibbonPlus.Interval)">
+            <summary>
+            Gets the sum of two <see cref="T:LibRibbonPlus.Interval"/> values.
+            </summary>
+            <param name="left">The first <see cref="T:LibRibbonPlus.Interval"/> to add.</param>
+            <param name="right">The second <see cref="T:LibRibbonPlus.Interval"/> to add.</param>
+            <returns>An <see cref="T:LibRibbonPlus.Interval"/> representing the sum of both elements.</returns>
+        </member>
+        <member name="M:LibRibbonPlus.Interval.op_Subtraction(LibRibbonPlus.Interval,LibRibbonPlus.Interval)">
+            <summary>
+            Gets the difference of two <see cref="T:LibRibbonPlus.Interval"/> values.
+            </summary>
+            <param name="left">The first <see cref="T:LibRibbonPlus.Interval"/> to subtract.</param>
+            <param name="right">The second <see cref="T:LibRibbonPlus.Interval"/> to subtract.</param>
+            <returns>An <see cref="T:LibRibbonPlus.Interval"/> representing the difference of both elements.</returns>
+        </member>
+        <member name="M:LibRibbonPlus.Interval.TryParse(LibRibbonPlus.Chars,LibRibbonPlus.Interval@)">
+            <summary>
+            Tries to create a new instance of <see cref="T:LibRibbonPlus.Interval"/> from a given <see cref="T:LibRibbonPlus.Chars"/>.
+            </summary>
+            <param name="chars">The sequence of characters to parse.</param>
+            <param name="interval">The result, or 0.</param>
+            <returns>The value <see langword="true"/> if the parse is successful, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:LibRibbonPlus.Interval.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="T:LibRibbonPlus.TimingWindow">
+            <summary>
+            Specifies a timing window between two points.
+            </summary>
+        </member>
+        <member name="M:LibRibbonPlus.TimingWindow.#ctor(LibRibbonPlus.Interval,LibRibbonPlus.Interval)">
+            <summary>
+            Initializes a new instance of the <see cref="T:LibRibbonPlus.TimingWindow"/> struct.
+            </summary>
+            <param name="center">The center of the timing window.</param>
+            <param name="offset">The amount of offset allowed by the timing window.</param>
+        </member>
+        <member name="P:LibRibbonPlus.TimingWindow.Earliest">
+            <summary>
+            Gets the earliest window in which this <see cref="T:LibRibbonPlus.TimingWindow"/> is valid.
+            </summary>
+        </member>
+        <member name="P:LibRibbonPlus.TimingWindow.Latest">
+            <summary>
+            Gets the latest window in which this <see cref="T:LibRibbonPlus.TimingWindow"/> is valid.
+            </summary>
+        </member>
+        <member name="M:LibRibbonPlus.TimingWindow.IsBetween(LibRibbonPlus.Interval)">
+            <summary>
+            Determines whether an <see cref="T:LibRibbonPlus.Interval"/> is between the earliest and latest timing windows.
+            </summary>
+            <param name="interval">The interval to check.</param>
+            <returns>The value <see langword="true"/> if <see cref="P:LibRibbonPlus.TimingWindow.Earliest"/> is less than or equal <paramref name="interval"/> and <paramref name="interval"/> is less than or equal <see cref="P:LibRibbonPlus.TimingWindow.Latest"/>.</returns>
+        </member>
+        <member name="T:LibRibbonPlus.Unit">
+            <summary>
+            Represents a unit type. The point of this is to allow <see langword="switch"/> expressions to be used by returning <see cref="T:LibRibbonPlus.Unit"/> instead of <see langword="void"/>.
+            </summary>
+        </member>
+        <member name="T:LibRibbonPlus.Velocity">
+            <summary>
+            Represents something that travels at a specific speed.
+            </summary>
+            <param name="Amount">The speed.</param>
+        </member>
+        <member name="M:LibRibbonPlus.Velocity.#ctor(System.Single)">
+            <summary>
+            Represents something that travels at a specific speed.
+            </summary>
+            <param name="Amount">The speed.</param>
+        </member>
+        <member name="P:LibRibbonPlus.Velocity.Blank">
+            <summary>
+            Gets the explicit default value of this type.
+            </summary>
+        </member>
+        <member name="M:LibRibbonPlus.Velocity.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibRibbonPlus.Velocity.TryParse(LibRibbonPlus.Chars,LibRibbonPlus.Velocity@)">
+            <summary>
+            Tries to create a new instance of <see cref="T:LibRibbonPlus.Velocity"/> from a given <see cref="T:LibRibbonPlus.Chars"/>.
+            </summary>
+            <param name="chars">The sequence of characters to parse.</param>
+            <param name="velocity">The result, or <see cref="P:LibRibbonPlus.Velocity.Blank"/>.</param>
+            <returns>The value <see langword="true"/> if the parse is successful, otherwise <see langword="false"/>.</returns>
+        </member>
+    </members>
+</doc>

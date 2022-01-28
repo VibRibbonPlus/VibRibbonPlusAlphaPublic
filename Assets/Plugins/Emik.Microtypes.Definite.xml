@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Emik.Microtypes.Definite</name>
+    </assembly>
+    <members>
+        <member name="T:Emik.Microtypes.Definite`1">
+            <summary>
+            Encapsulates a <see langword="class"/> which automates <see langword="null"/> checks on the constructor.
+            </summary>
+            <typeparam name="T">The type of data to encapsulate.</typeparam>
+        </member>
+        <member name="M:Emik.Microtypes.Definite`1.#ctor(`0)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Emik.Microtypes.Definite`1"/> struct.
+            </summary>
+            <param name="value">The value to pass in and perform a <see langword="null"/> check on.</param>
+        </member>
+        <member name="P:Emik.Microtypes.Definite`1.Value">
+            <summary>
+            Gets the encapsulated data.
+            </summary>
+        </member>
+        <member name="P:Emik.Microtypes.Definite`1.Emik#Microtypes#IDefinite#Value">
+            <inheritdoc/>
+        </member>
+        <member name="M:Emik.Microtypes.Definite`1.op_Implicit(Emik.Microtypes.Definite{`0})~`0">
+            <summary>
+            Implicitly takes the inner value out of <see cref="T:Emik.Microtypes.Definite`1"/>.
+            </summary>
+            <param name="definite">The <see cref="T:Emik.Microtypes.Definite`1"/> instance to take out the <see cref="P:Emik.Microtypes.Definite`1.Value"/> from.</param>
+        </member>
+        <member name="M:Emik.Microtypes.Definite`1.op_Implicit(`0)~Emik.Microtypes.Definite{`0}">
+            <summary>
+            Implicitly calls the constructor of <see cref="T:Emik.Microtypes.Definite`1"/>.
+            </summary>
+            <param name="value">The value to wrap in <see cref="T:Emik.Microtypes.Definite`1"/>.</param>
+        </member>
+        <member name="M:Emik.Microtypes.Definite`1.op_Equality(Emik.Microtypes.Definite{`0},Emik.Microtypes.Definite{`0})">
+            <summary>
+            Determines whether the two <see cref="T:Emik.Microtypes.Definite`1"/> contain the same <see cref="P:Emik.Microtypes.Definite`1.Value"/>.
+            </summary>
+            <param name="left">The left-hand side comparison.</param>
+            <param name="right">The right-hand side comparison.</param>
+            <returns><see langword="true"/> if both <see cref="T:Emik.Microtypes.Definite`1"/> are equal in <see cref="P:Emik.Microtypes.Definite`1.Value"/>, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Definite`1.op_Inequality(Emik.Microtypes.Definite{`0},Emik.Microtypes.Definite{`0})">
+            <summary>
+            Determines whether the two <see cref="T:Emik.Microtypes.Definite`1"/> don't contain the same <see cref="P:Emik.Microtypes.Definite`1.Value"/>.
+            </summary>
+            <param name="left">The left-hand side comparison.</param>
+            <param name="right">The right-hand side comparison.</param>
+            <returns><see langword="true"/> if both <see cref="T:Emik.Microtypes.Definite`1"/> are not equal in <see cref="P:Emik.Microtypes.Definite`1.Value"/>, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Definite`1.op_UnaryPlus(Emik.Microtypes.Definite{`0})">
+            <summary>
+            Implicitly takes the inner value out of <see cref="T:Emik.Microtypes.Definite`1"/>.
+            </summary>
+            <param name="definite">The <see cref="T:Emik.Microtypes.Definite`1"/> instance to take out the <see cref="P:Emik.Microtypes.Definite`1.Value"/> from.</param>
+            <returns>The inner <see cref="P:Emik.Microtypes.Definite`1.Value"/> of the <see cref="T:Emik.Microtypes.Definite`1"/> instance.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Definite`1.Equals(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Emik.Microtypes.Definite`1.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="M:Emik.Microtypes.Definite`1.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="T:Emik.Microtypes.Definite`1.DefiniteException">
+            <summary>
+            The exception that is thrown whenever a <see langword="null"/> check returns <see langword="true"/> in the constructor.
+            </summary>
+        </member>
+        <member name="M:Emik.Microtypes.Definite`1.DefiniteException.#ctor(System.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Emik.Microtypes.Definite`1.DefiniteException"/> class.
+            </summary>
+            <param name="type">The <see cref="T:System.Type"/> to get its <see cref="P:System.Reflection.MemberInfo.Name"/> from.</param>
+        </member>
+        <member name="T:Emik.Microtypes.IDefinite">
+            <summary>
+            Contains a uniform way for <see cref="P:Emik.Microtypes.Definite`1.Value"/> to be abstracted as non-generic <see cref="T:System.Object"/>.
+            </summary>
+        </member>
+        <member name="P:Emik.Microtypes.IDefinite.Value">
+            <summary>
+            Gets the encapsulated data.
+            </summary>
+        </member>
+    </members>
+</doc>

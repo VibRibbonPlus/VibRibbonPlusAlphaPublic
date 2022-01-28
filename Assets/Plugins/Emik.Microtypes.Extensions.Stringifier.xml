@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Emik.Microtypes.Extensions.Stringifier</name>
+    </assembly>
+    <members>
+        <member name="T:Emik.Microtypes.Extensions.Stringifier">
+            <summary>
+            Provides the <see cref="M:Emik.Microtypes.Extensions.Stringifier.Stringify``1(``0,System.Boolean)"/> extension method.
+            </summary>
+        </member>
+        <member name="M:Emik.Microtypes.Extensions.Stringifier.Stringify``1(``0,System.Boolean)">
+            <summary>
+            Converts <paramref name="source"/> into a <see cref="T:System.String"/> representation of <paramref name="source"/>.
+            </summary>
+            <remarks>
+            <para>Unlike <see cref="M:System.Object.ToString"/>, the individual items inside <paramref name="source"/> if it is an iterator type such as <see cref="T:System.Collections.IDictionary"/>, <see cref="T:System.Collections.IEnumerable"/>, or <see cref="T:System.Collections.IEnumerator"/>.</para>
+            </remarks>
+            <typeparam name="T">The type of the source.</typeparam>
+            <param name="source">The item to get a <see cref="T:System.String"/> representation of.</param>
+            <param name="includeCharSeparators">If <see langword="true"/>, will include the ' and " surrounding characters for <see cref="T:System.Char"/> and <see cref="T:System.String"/> respectively.</param>
+            <returns><paramref name="source"/> as <see cref="T:System.String"/>.</returns>
+        </member>
+    </members>
+</doc>

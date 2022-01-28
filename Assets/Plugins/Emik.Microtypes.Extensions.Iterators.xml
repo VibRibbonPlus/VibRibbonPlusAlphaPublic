@@ -1,0 +1,387 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Emik.Microtypes.Extensions.Iterators</name>
+    </assembly>
+    <members>
+        <member name="T:Emik.Microtypes.Extensions.Iterators">
+            <summary>
+            Extension methods for iterating over a set of elements, or for generating new ones.
+            </summary>
+        </member>
+        <member name="M:Emik.Microtypes.Extensions.Iterators.For(System.Int32,System.Action)">
+            <summary>
+            The <see langword="for"/> statement executes a statement or a block of statements while a specified Boolean expression evaluates to <see langword="true"/>.
+            </summary>
+            <remarks>
+            <para><seealso href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/statements/iteration-statements#the-for-statement"/></para>
+            </remarks>
+            <exception cref="T:System.NullReferenceException">One of the parameters are null.</exception>
+            <param name="upper">The length to reach to in the for loop.</param>
+            <param name="action">The action for each loop.</param>
+            <returns>The parameter <paramref name="upper"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Extensions.Iterators.For(System.Int32,System.Action{System.Int32})">
+            <summary>
+            The <see langword="for"/> statement executes a statement or a block of statements while a specified Boolean expression evaluates to <see langword="true"/>.
+            </summary>
+            <remarks>
+            <para><seealso href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/statements/iteration-statements#the-for-statement"/></para>
+            </remarks>
+            <exception cref="T:System.NullReferenceException">One of the parameters are null.</exception>
+            <param name="upper">The length to reach to in the for loop.</param>
+            <param name="action">The action for each loop.</param>
+            <returns>The parameter <paramref name="upper"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Extensions.Iterators.For(System.Int32)">
+            <summary>
+            The <see langword="for"/> statement executes a statement or a block of statements while a specified Boolean expression evaluates to <see langword="true"/>.
+            </summary>
+            <remarks>
+            <para><seealso href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/statements/iteration-statements#the-for-statement"/></para>
+            </remarks>
+            <param name="upper">The length to reach to in the for loop.</param>
+            <returns>An <see cref="T:System.Collections.Generic.IEnumerable`1"/> of <see cref="T:System.Int32"/> from ranges 0 to <paramref name="upper"/> - 1.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Extensions.Iterators.For``1(System.Int32,``0,System.Action{``0})">
+            <summary>
+            The <see langword="for"/> statement executes a statement or a block of statements while a specified Boolean expression evaluates to <see langword="true"/>.
+            </summary>
+            <remarks>
+            <para><seealso href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/statements/iteration-statements#the-for-statement"/></para>
+            </remarks>
+            <exception cref="T:System.NullReferenceException">One of the parameters are null.</exception>
+            <typeparam name="TExternal">The type of external parameter to pass into the callback.</typeparam>
+            <param name="upper">The length to reach to in the for loop.</param>
+            <param name="external">Any external parameter to be passed repeatedly into the callback.</param>
+            <param name="action">The action for each loop.</param>
+            <returns>The parameter <paramref name="upper"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Extensions.Iterators.For``1(System.Int32,``0,System.Action{System.Int32,``0})">
+            <summary>
+            The <see langword="for"/> statement executes a statement or a block of statements while a specified Boolean expression evaluates to <see langword="true"/>.
+            </summary>
+            <remarks>
+            <para><seealso href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/statements/iteration-statements#the-for-statement"/></para>
+            </remarks>
+            <exception cref="T:System.NullReferenceException">One of the parameters are null.</exception>
+            <typeparam name="TExternal">The type of external parameter to pass into the callback.</typeparam>
+            <param name="upper">The length to reach to in the for loop.</param>
+            <param name="external">Any external parameter to be passed repeatedly into the callback.</param>
+            <param name="action">The action for each loop.</param>
+            <returns>The parameter <paramref name="upper"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Extensions.Iterators.For``1(System.Int32,``0)">
+            <summary>
+            The <see langword="for"/> statement executes a statement or a block of statements while a specified Boolean expression evaluates to <see langword="true"/>.
+            </summary>
+            <remarks>
+            <para><seealso href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/statements/iteration-statements#the-for-statement"/></para>
+            </remarks>
+            <typeparam name="TExternal">The type of external parameter to pass into the callback.</typeparam>
+            <param name="upper">The length to reach to in the for loop.</param>
+            <param name="external">Any external parameter to be passed repeatedly into the callback.</param>
+            <returns>An <see cref="T:System.Collections.Generic.IEnumerable`1"/> of <see cref="T:System.Int32"/> from ranges 0 to <paramref name="upper"/> - 1.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Extensions.Iterators.For``1(System.Int32,System.Func{``0})">
+            <summary>
+            The <see langword="for"/> statement executes a statement or a block of statements while a specified Boolean expression evaluates to <see langword="true"/>.
+            </summary>
+            <remarks>
+            <para><seealso href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/statements/iteration-statements#the-for-statement"/></para>
+            </remarks>
+            <exception cref="T:System.NullReferenceException">One of the parameters are null.</exception>
+            <typeparam name="TResult">The type of iterator.</typeparam>
+            <param name="upper">The length to reach to in the for loop.</param>
+            <param name="func">The function for each loop.</param>
+            <returns>All instances that <paramref name="func"/> used in an <see cref="T:System.Collections.Generic.IEnumerable`1"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Extensions.Iterators.For``1(System.Int32,System.Func{System.Int32,``0})">
+            <summary>
+            The <see langword="for"/> statement executes a statement or a block of statements while a specified Boolean expression evaluates to <see langword="true"/>.
+            </summary>
+            <remarks>
+            <para><seealso href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/statements/iteration-statements#the-for-statement"/></para>
+            </remarks>
+            <exception cref="T:System.NullReferenceException">One of the parameters are null.</exception>
+            <typeparam name="TResult">The type of iterator.</typeparam>
+            <param name="upper">The length to reach to in the for loop.</param>
+            <param name="func">The function for each loop.</param>
+            <returns>All instances that <paramref name="func"/> used in an <see cref="T:System.Collections.Generic.IEnumerable`1"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Extensions.Iterators.For``2(System.Int32,``0,System.Func{``0,``1})">
+            <summary>
+            The <see langword="for"/> statement executes a statement or a block of statements while a specified Boolean expression evaluates to <see langword="true"/>.
+            </summary>
+            <remarks>
+            <para><seealso href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/statements/iteration-statements#the-for-statement"/></para>
+            </remarks>
+            <exception cref="T:System.NullReferenceException">One of the parameters are null.</exception>
+            <typeparam name="TExternal">The type of external parameter to pass into the callback.</typeparam>
+            <typeparam name="TResult">The type of iterator.</typeparam>
+            <param name="upper">The length to reach to in the for loop.</param>
+            <param name="external">Any external parameter to be passed repeatedly into the callback.</param>
+            <param name="func">The function for each loop.</param>
+            <returns>All instances that <paramref name="func"/> used in an <see cref="T:System.Collections.Generic.IEnumerable`1"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Extensions.Iterators.For``2(System.Int32,``0,System.Func{System.Int32,``0,``1})">
+            <summary>
+            The <see langword="for"/> statement executes a statement or a block of statements while a specified Boolean expression evaluates to <see langword="true"/>.
+            </summary>
+            <remarks>
+            <para><seealso href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/statements/iteration-statements#the-for-statement"/></para>
+            </remarks>
+            <exception cref="T:System.NullReferenceException">One of the parameters are null.</exception>
+            <typeparam name="TExternal">The type of external parameter to pass into the callback.</typeparam>
+            <typeparam name="TResult">The type of iterator.</typeparam>
+            <param name="upper">The length to reach to in the for loop.</param>
+            <param name="external">Any external parameter to be passed repeatedly into the callback.</param>
+            <param name="func">The function for each loop.</param>
+            <returns>All instances that <paramref name="func"/> used in an <see cref="T:System.Collections.Generic.IEnumerable`1"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Extensions.Iterators.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})">
+            <summary>
+            The <see langword="foreach"/> statement executes a statement or a block of statements for each element in an instance of the type that implements the <see cref="T:System.Collections.IEnumerable"/> or <see cref="T:System.Collections.Generic.IEnumerable`1"/> interface.
+            </summary>
+            <remarks>
+            <para><seealso href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/statements/iteration-statements#the-foreach-statement"/></para>
+            </remarks>
+            <exception cref="T:System.NullReferenceException">One of the parameters are null.</exception>
+            <typeparam name="T">The type of iterator.</typeparam>
+            <param name="iterable">The collection of items to go through one-by-one.</param>
+            <param name="action">The action to do on each item in <paramref name="iterable"/>.</param>
+            <returns>The parameter <paramref name="iterable"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Extensions.Iterators.ForEach``2(System.Collections.Generic.IEnumerable{``0},``1,System.Action{``0,``1})">
+            <summary>
+            The <see langword="foreach"/> statement executes a statement or a block of statements for each element in an instance of the type that implements the <see cref="T:System.Collections.IEnumerable"/> or <see cref="T:System.Collections.Generic.IEnumerable`1"/> interface.
+            </summary>
+            <remarks>
+            <para><seealso href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/statements/iteration-statements#the-foreach-statement"/></para>
+            </remarks>
+            <exception cref="T:System.NullReferenceException">One of the parameters are null.</exception>
+            <typeparam name="T">The type of iterator.</typeparam>
+            <typeparam name="TExternal">The type of external parameter to pass into the callback.</typeparam>
+            <param name="iterable">The collection of items to go through one-by-one.</param>
+            <param name="external">Any external parameter to be passed repeatedly into the callback.</param>
+            <param name="action">The action to do on each item in <paramref name="iterable"/>.</param>
+            <returns>The parameter <paramref name="iterable"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Extensions.Iterators.ForEach``2(``0,System.Action{``1})">
+            <summary>
+            The <see langword="foreach"/> statement executes a statement or a block of statements for each element in an instance of the type that implements the <see cref="T:System.Collections.IEnumerable"/> or <see cref="T:System.Collections.Generic.IEnumerable`1"/> interface.
+            </summary>
+            <remarks>
+            <para><seealso href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/statements/iteration-statements#the-foreach-statement"/></para>
+            </remarks>
+            <exception cref="T:System.NullReferenceException">One of the parameters are null.</exception>
+            <typeparam name="TEnumerable">The type of iterator.</typeparam>
+            <typeparam name="TCurrent">The type of each item in the iterator.</typeparam>
+            <param name="iterable">The collection of items to go through one-by-one.</param>
+            <param name="action">The action to do on each item in <paramref name="iterable"/>.</param>
+            <returns>The parameter <paramref name="iterable"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Extensions.Iterators.ForEach``3(``0,``2,System.Action{``1,``2})">
+            <summary>
+            The <see langword="foreach"/> statement executes a statement or a block of statements for each element in an instance of the type that implements the <see cref="T:System.Collections.IEnumerable"/> or <see cref="T:System.Collections.Generic.IEnumerable`1"/> interface.
+            </summary>
+            <remarks>
+            <para><seealso href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/statements/iteration-statements#the-foreach-statement"/></para>
+            </remarks>
+            <exception cref="T:System.NullReferenceException">One of the parameters are null.</exception>
+            <typeparam name="TEnumerable">The type of iterator.</typeparam>
+            <typeparam name="TCurrent">The type of each item in the iterator.</typeparam>
+            <typeparam name="TExternal">The type of external parameter to pass into the callback.</typeparam>
+            <param name="iterable">The collection of items to go through one-by-one.</param>
+            <param name="external">Any external parameter to be passed repeatedly into the callback.</param>
+            <param name="action">The action to do on each item in <paramref name="iterable"/>.</param>
+            <returns>The parameter <paramref name="iterable"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Extensions.Iterators.ForEach``3(``0,System.Action{``1,``2})">
+            <summary>
+            The <see langword="foreach"/> statement executes a statement or a block of statements for each element in an instance of the type that implements the <see cref="T:System.Collections.IEnumerable"/> or <see cref="T:System.Collections.Generic.IEnumerable`1"/> interface.
+            </summary>
+            <remarks>
+            <para><seealso href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/statements/iteration-statements#the-foreach-statement"/></para>
+            </remarks>
+            <exception cref="T:System.NullReferenceException">One of the parameters are null.</exception>
+            <typeparam name="TDictionary">The type of iterator.</typeparam>
+            <typeparam name="TKey">The type of each key in the iterator.</typeparam>
+            <typeparam name="TValue">The type of each value in the iterator.</typeparam>
+            <param name="iterable">The collection of items to go through one-by-one.</param>
+            <param name="action">The action to do on each item in <paramref name="iterable"/>.</param>
+            <returns>The parameter <paramref name="iterable"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Extensions.Iterators.ForEach``4(``0,``3,System.Action{``1,``2,``3})">
+            <summary>
+            The <see langword="foreach"/> statement executes a statement or a block of statements for each element in an instance of the type that implements the <see cref="T:System.Collections.IEnumerable"/> or <see cref="T:System.Collections.Generic.IEnumerable`1"/> interface.
+            </summary>
+            <remarks>
+            <para><seealso href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/statements/iteration-statements#the-foreach-statement"/></para>
+            </remarks>
+            <exception cref="T:System.NullReferenceException">One of the parameters are null.</exception>
+            <typeparam name="TDictionary">The type of iterator.</typeparam>
+            <typeparam name="TKey">The type of each key in the iterator.</typeparam>
+            <typeparam name="TValue">The type of each value in the iterator.</typeparam>
+            <typeparam name="TExternal">The type of external parameter to pass into the callback.</typeparam>
+            <param name="iterable">The collection of items to go through one-by-one.</param>
+            <param name="external">Any external parameter to be passed repeatedly into the callback.</param>
+            <param name="action">The action to do on each item in <paramref name="iterable"/>.</param>
+            <returns>The parameter <paramref name="iterable"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Extensions.Iterators.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0,System.Int32})">
+            <summary>
+            The <see langword="foreach"/> statement executes a statement or a block of statements for each element in an instance of the type that implements the <see cref="T:System.Collections.IEnumerable"/> or <see cref="T:System.Collections.Generic.IEnumerable`1"/> interface.
+            </summary>
+            <remarks>
+            <para><seealso href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/statements/iteration-statements#the-foreach-statement"/></para>
+            </remarks>
+            <exception cref="T:System.NullReferenceException">One of the parameters are null.</exception>
+            <typeparam name="T">The type of iterator.</typeparam>
+            <param name="iterable">The collection of items to go through one-by-one.</param>
+            <param name="action">The action to do on each item in <paramref name="iterable"/>.</param>
+            <returns>The parameter <paramref name="iterable"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Extensions.Iterators.ForEach``2(System.Collections.Generic.IEnumerable{``0},``1,System.Action{``0,System.Int32,``1})">
+            <summary>
+            The <see langword="foreach"/> statement executes a statement or a block of statements for each element in an instance of the type that implements the <see cref="T:System.Collections.IEnumerable"/> or <see cref="T:System.Collections.Generic.IEnumerable`1"/> interface.
+            </summary>
+            <remarks>
+            <para><seealso href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/statements/iteration-statements#the-foreach-statement"/></para>
+            </remarks>
+            <exception cref="T:System.NullReferenceException">One of the parameters are null.</exception>
+            <typeparam name="T">The type of iterator.</typeparam>
+            <typeparam name="TExternal">The type of external parameter to pass into the callback.</typeparam>
+            <param name="iterable">The collection of items to go through one-by-one.</param>
+            <param name="external">Any external parameter to be passed repeatedly into the callback.</param>
+            <param name="action">The action to do on each item in <paramref name="iterable"/>.</param>
+            <returns>The parameter <paramref name="iterable"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Extensions.Iterators.ForEach``2(``0,System.Action{``1,System.Int32})">
+            <summary>
+            The <see langword="foreach"/> statement executes a statement or a block of statements for each element in an instance of the type that implements the <see cref="T:System.Collections.IEnumerable"/> or <see cref="T:System.Collections.Generic.IEnumerable`1"/> interface.
+            </summary>
+            <remarks>
+            <para><seealso href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/statements/iteration-statements#the-foreach-statement"/></para>
+            </remarks>
+            <exception cref="T:System.NullReferenceException">One of the parameters are null.</exception>
+            <typeparam name="TEnumerable">The type of iterator.</typeparam>
+            <typeparam name="TCurrent">The type of each item in the iterator.</typeparam>
+            <param name="iterable">The collection of items to go through one-by-one.</param>
+            <param name="action">The action to do on each item in <paramref name="iterable"/>.</param>
+            <returns>The parameter <paramref name="iterable"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Extensions.Iterators.ForEach``3(``0,``2,System.Action{``1,System.Int32,``2})">
+            <summary>
+            The <see langword="foreach"/> statement executes a statement or a block of statements for each element in an instance of the type that implements the <see cref="T:System.Collections.IEnumerable"/> or <see cref="T:System.Collections.Generic.IEnumerable`1"/> interface.
+            </summary>
+            <remarks>
+            <para><seealso href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/statements/iteration-statements#the-foreach-statement"/></para>
+            </remarks>
+            <exception cref="T:System.NullReferenceException">One of the parameters are null.</exception>
+            <typeparam name="TEnumerable">The type of iterator.</typeparam>
+            <typeparam name="TCurrent">The type of each item in the iterator.</typeparam>
+            <typeparam name="TExternal">The type of external parameter to pass into the callback.</typeparam>
+            <param name="iterable">The collection of items to go through one-by-one.</param>
+            <param name="external">Any external parameter to be passed repeatedly into the callback.</param>
+            <param name="action">The action to do on each item in <paramref name="iterable"/>.</param>
+            <returns>The parameter <paramref name="iterable"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Extensions.Iterators.ForEach``3(``0,System.Action{``1,``2,System.Int32})">
+            <summary>
+            The <see langword="foreach"/> statement executes a statement or a block of statements for each element in an instance of the type that implements the <see cref="T:System.Collections.IEnumerable"/> or <see cref="T:System.Collections.Generic.IEnumerable`1"/> interface.
+            </summary>
+            <remarks>
+            <para><seealso href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/statements/iteration-statements#the-foreach-statement"/></para>
+            </remarks>
+            <exception cref="T:System.NullReferenceException">One of the parameters are null.</exception>
+            <typeparam name="TDictionary">The type of iterator.</typeparam>
+            <typeparam name="TKey">The type of each key in the iterator.</typeparam>
+            <typeparam name="TValue">The type of each value in the iterator.</typeparam>
+            <param name="iterable">The collection of items to go through one-by-one.</param>
+            <param name="action">The action to do on each item in <paramref name="iterable"/>.</param>
+            <returns>The parameter <paramref name="iterable"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Extensions.Iterators.ForEach``4(``0,``3,System.Action{``1,``2,System.Int32,``3})">
+            <summary>
+            The <see langword="foreach"/> statement executes a statement or a block of statements for each element in an instance of the type that implements the <see cref="T:System.Collections.IEnumerable"/> or <see cref="T:System.Collections.Generic.IEnumerable`1"/> interface.
+            </summary>
+            <remarks>
+            <para><seealso href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/statements/iteration-statements#the-foreach-statement"/></para>
+            </remarks>
+            <exception cref="T:System.NullReferenceException">One of the parameters are null.</exception>
+            <typeparam name="TDictionary">The type of iterator.</typeparam>
+            <typeparam name="TKey">The type of each key in the iterator.</typeparam>
+            <typeparam name="TValue">The type of each value in the iterator.</typeparam>
+            <typeparam name="TExternal">The type of external parameter to pass into the callback.</typeparam>
+            <param name="iterable">The collection of items to go through one-by-one.</param>
+            <param name="external">Any external parameter to be passed repeatedly into the callback.</param>
+            <param name="action">The action to do on each item in <paramref name="iterable"/>.</param>
+            <returns>The parameter <paramref name="iterable"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Extensions.Iterators.ForEachObject``1(``0,System.Action{System.Object})">
+            <summary>
+            The <see langword="foreach"/> statement executes a statement or a block of statements for each element in an instance of the type that implements the <see cref="T:System.Collections.IEnumerable"/> or <see cref="T:System.Collections.Generic.IEnumerable`1"/> interface.
+            </summary>
+            <remarks>
+            <para><seealso href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/statements/iteration-statements#the-foreach-statement"/></para>
+            </remarks>
+            <exception cref="T:System.NullReferenceException">One of the parameters are null.</exception>
+            <typeparam name="TEnumerable">The type of iterator.</typeparam>
+            <param name="iterable">The collection of items to go through one-by-one.</param>
+            <param name="action">The action to do on each item in <paramref name="iterable"/>.</param>
+            <returns>The parameter <paramref name="iterable"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Extensions.Iterators.ForEachObject``2(``0,``1,System.Action{System.Object,``1})">
+            <summary>
+            The <see langword="foreach"/> statement executes a statement or a block of statements for each element in an instance of the type that implements the <see cref="T:System.Collections.IEnumerable"/> or <see cref="T:System.Collections.Generic.IEnumerable`1"/> interface.
+            </summary>
+            <remarks>
+            <para><seealso href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/statements/iteration-statements#the-foreach-statement"/></para>
+            </remarks>
+            <exception cref="T:System.NullReferenceException">One of the parameters are null.</exception>
+            <typeparam name="TEnumerable">The type of iterator.</typeparam>
+            <typeparam name="TExternal">The type of external parameter to pass into the callback.</typeparam>
+            <param name="iterable">The collection of items to go through one-by-one.</param>
+            <param name="external">Any external parameter to be passed repeatedly into the callback.</param>
+            <param name="action">The action to do on each item in <paramref name="iterable"/>.</param>
+            <returns>The parameter <paramref name="iterable"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Extensions.Iterators.ForEachObject``1(``0,System.Action{System.Object,System.Int32})">
+            <summary>
+            The <see langword="foreach"/> statement executes a statement or a block of statements for each element in an instance of the type that implements the <see cref="T:System.Collections.IEnumerable"/> or <see cref="T:System.Collections.Generic.IEnumerable`1"/> interface.
+            </summary>
+            <remarks>
+            <para><seealso href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/statements/iteration-statements#the-foreach-statement"/></para>
+            </remarks>
+            <exception cref="T:System.NullReferenceException">One of the parameters are null.</exception>
+            <typeparam name="TEnumerable">The type of iterator.</typeparam>
+            <param name="iterable">The collection of items to go through one-by-one.</param>
+            <param name="action">The action to do on each item in <paramref name="iterable"/>.</param>
+            <returns>The parameter <paramref name="iterable"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Extensions.Iterators.ForEachObject``2(``0,``1,System.Action{System.Object,System.Int32,``1})">
+            <summary>
+            The <see langword="foreach"/> statement executes a statement or a block of statements for each element in an instance of the type that implements the <see cref="T:System.Collections.IEnumerable"/> or <see cref="T:System.Collections.Generic.IEnumerable`1"/> interface.
+            </summary>
+            <remarks>
+            <para><seealso href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/statements/iteration-statements#the-foreach-statement"/></para>
+            </remarks>
+            <exception cref="T:System.NullReferenceException">One of the parameters are null.</exception>
+            <typeparam name="TEnumerable">The type of iterator.</typeparam>
+            <typeparam name="TExternal">The type of external parameter to pass into the callback.</typeparam>
+            <param name="iterable">The collection of items to go through one-by-one.</param>
+            <param name="external">Any external parameter to be passed repeatedly into the callback.</param>
+            <param name="action">The action to do on each item in <paramref name="iterable"/>.</param>
+            <returns>The parameter <paramref name="iterable"/>.</returns>
+        </member>
+        <member name="M:Emik.Microtypes.Extensions.Iterators.ToReadOnly``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Gets a <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1"/> from the current <see cref="T:System.Collections.Generic.IEnumerable`1"/>.
+            </summary>
+            <typeparam name="T">The type of the <paramref name="iterable"/> and the <see langword="return"/>.</typeparam>
+            <param name="iterable">The collection to turn into a <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1"/>.</param>
+            <returns>A <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1"/> with values of <paramref name="iterable"/>.</returns>
+        </member>
+    </members>
+</doc>
