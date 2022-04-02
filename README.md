@@ -5,7 +5,7 @@ Anyone may edit the source code of the game in any way and play/build it.
 Discord: https://discord.gg/GDX35rR559
 Twitter: https://twitter.com/ribbon_vib
 # Contact me
-Discord: Vib-Ribbon Replay#7383
+Discord: haxnoob#1337
 Email: redhead@redheadbusiness.xyz (Only email me for business/project reasons)
 
 # Vib-Ribbon Replay (Original and Latest Game/Source Code)
