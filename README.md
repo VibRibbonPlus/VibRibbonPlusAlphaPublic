@@ -1,5 +1,5 @@
 # Vib-Ribbon Replay Alpha
-This is the latest public source code of Vib-Ribbon Replay.
+This is the last public source code of Vib-Ribbon Replay/Vib-Ribbon+ Before it was cancelled.
 Anyone may edit the source code of the game in any way and play/build it.
 # Social Media Links
 Discord: https://discord.gg/GDX35rR559
